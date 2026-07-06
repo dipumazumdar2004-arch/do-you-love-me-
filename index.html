@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Love Me? ❤️</title>
+    <!-- Google Fonts: Fredoka for soft/rounded headers, Outfit for clean body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas for Floating Hearts -->
+    <canvas id="hearts-canvas"></canvas>
+
+    <!-- Music/Sound Control Button (floating top-right) -->
+    <button id="music-toggle" class="music-toggle-btn" aria-label="Toggle Sound Effects">
+        <span class="music-icon">🎵</span> <span class="music-text">Sound: Off</span>
+    </button>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Landing Screen Card -->
+        <div id="proposal-card" class="glass-card active">
+            <div class="card-content">
+                <div class="visual-container">
+                    <div id="proposal-heart" class="heart-pulse-icon">💖</div>
+                    <div id="no-photo-container" class="no-photo-frame" style="display: none;">
+                        <img src="images/her.jpg" alt="Suspicious Girlfriend" id="no-photo">
+                    </div>
+                </div>
+                <h1 id="question-text" class="card-title">❤️ Do You Love Me? ❤️</h1>
+                <p id="sub-question-text" class="card-subtitle">Choose carefully... 😏</p>
+                
+                <div class="button-wrapper" id="button-wrapper">
+                    <div id="yes-btn-wrapper" class="yes-btn-scale-wrapper">
+                        <button id="yes-btn" class="btn yes-btn">❤️ YES</button>
+                    </div>
+                    <button id="no-btn" class="btn no-btn">💔 NO</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Celebration Screen Card (initially hidden) -->
+        <div id="celebration-card" class="glass-card">
+            <!-- Confetti Canvas overlay inside card/full screen -->
+            <canvas id="confetti-canvas"></canvas>
+            
+            <div class="card-content celebration-content">
+                <h1 class="celebration-title">Thank You ❤️</h1>
+                <h2 class="celebration-subtitle">I Love You Sooooo Muchhhh Babbyyyy ❤️🥺💖💕💞</h2>
+                
+                <!-- Rotating hearts and floating image container -->
+                <div class="photo-container-wrapper">
+                    <div class="orbiting-hearts-container" id="orbiting-hearts">
+                        <!-- Orbiting heart elements will be injected here -->
+                    </div>
+                    <div class="photo-frame">
+                        <img src="images/me.jpg" alt="Boyfriend Blowing Kiss" id="proposal-image">
+                    </div>
+                </div>
+                
+                <p class="forever-text">❤️ Forever Together ❤️</p>
+                
+                <button id="again-btn" class="btn again-btn">Again ✨</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
